@@ -130,7 +130,7 @@ body {
   height: calc(100vh - 12vh);
   background-color: #8a8a8a;
   color: var(--cherry);
-  background-image: url(/img/heroBg.jpg);
+  background-image: url(img/heroBg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
