@@ -1,0 +1,261 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  cursor: pointer;
+}
+
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+:root {
+  --cherry: #faa4b5;
+  --primary: #f8b77c;
+  --secondary: #fff183;
+  --accent: #70c1e1;
+  --olivine: #82ba88;
+  --compliment: teal;
+  --default-transition: all 0.2s ease-in-out;
+}
+body {
+}
+
+/* HEADER */
+.header {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  color: white;
+  height: 12vh;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  filter: invert(1);
+  width: 60px;
+  height: 60px;
+}
+.logo:hover {
+  cursor: pointer;
+  filter: invert(0);
+  transition: var(--default-transition);
+}
+.logo-text h4 {
+  font-size: 2rem;
+}
+.logo-text:hover {
+  cursor: pointer;
+}
+
+/* -nav- */
+.nav * {
+  margin-left: 1.5rem;
+}
+.nav a {
+  position: relative;
+  font-weight: 600;
+}
+.nav a:hover {
+  color: var(--compliment);
+}
+.nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 0px;
+  background-color: var(--compliment);
+  transition: var(--default-transition);
+}
+.active {
+  color: var(--compliment);
+}
+.nav a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--compliment);
+  transition: var(--default-transition);
+}
+.donateBtn,.aboutBtn{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: var(--compliment);
+    color: var(--primary);
+    transition: var(--default-transition);
+    font-weight: 600;
+}
+.donateBtn:hover,.aboutBtn:hover{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--compliment);
+    background-color: transparent;
+    color: var(--compliment);
+    transition: var(--default-transition);
+}
+/* -nav- */
+/* HEADER */
+
+/* ------------------HERO------------- */
+.hero{
+  height: calc(100vh - 12vh);
+  background-color: #8a8a8a;
+  color: var(--cherry);
+  background-image: url(/img/heroBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.slogan{
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.438);
+}
+.mission{
+  color: var(--primary);
+  font-size: 2rem;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.747);
+  margin-bottom: 2rem;
+}
+.aboutBtn{
+  background-color: var(--secondary);
+  color: var(--accent);
+}
+.aboutBtn:hover{
+  background-color: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+}
+/* HERO */
+/* MISSION */
+.mission-section{
+  background-color: var(--accent);
+  color: var(--secondary);
+  padding: 3rem 6rem;
+  text-align: center;
+  font-size: 1.3rem;
+  padding-bottom: 4rem;
+}
+.mission-section p{
+  line-height: 1.5;
+}
+.mission-section h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+/* MISSION */
+/* IMPACT */
+.impact-section{
+  background-color: var(--olivine);
+  color: white;
+  padding: 3rem 6rem;
+  padding-bottom: 5rem;
+}
+.impact-section h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.stat-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.stat{
+  text-align: center;
+}
+.stat .number{
+  font-size: 3rem;
+  color: var(--primary);
+}
+/* IMPACT */
+/* Services */
+.services{
+    padding: 3rem 6rem;
+    text-align: center;
+}
+.services h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: underline; 
+}
+.services p{
+  font-size: 1.3rem;
+  color: rgb(48, 48, 48);
+}
+.card-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card{
+  border: 1px solid rgba(65, 65, 65, 0.26);
+  border-radius: 10px;
+  width: 40%;
+  height: 200px;
+  padding: 1rem;
+  text-align: start;
+}
+.card:hover{
+  /* border: 1px solid rgba(65, 65, 65, 0.747); */
+  box-shadow: 2px 4px 5px rgba(65, 65, 65, 0.329);
+}
+.card p {
+  font-size: 1rem;
+}
+.card h4{
+  margin-bottom: .5rem;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+.card .icon{
+  height: 60px;
+  width: 60px;
+  margin-bottom: 1rem;
+}
+.card .icon img{
+  width: 100%;
+}
+/* Services */
